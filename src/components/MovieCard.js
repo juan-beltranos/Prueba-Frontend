@@ -16,7 +16,7 @@ export const MovieCard = ({ popular }) => {
               <i className="fa fa-comments"></i> {vote_count}
             </div>
             <div className="view">
-              <i className="fa fa-eye"></i> 
+              <i class="fa fa-heart"></i>
             </div>
           </div>
         </div>
