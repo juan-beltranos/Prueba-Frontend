@@ -1019,6 +1019,9 @@ ol {
 	padding: 10px 15px;
 	border-radius: 2px;
 }
+div .view .favorite {
+	cursor: pointer;
+}
 
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/

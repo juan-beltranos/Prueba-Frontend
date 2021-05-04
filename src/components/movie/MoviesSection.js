@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import movieDB from "../api/MovieDb";
+import movieDB from "../../api/MovieDb";
 import { MovieCard } from "./MovieCard";
-import { MovieDetail } from "./MovieDetail";
+
 
 export const MoviesSection = () => {
 
