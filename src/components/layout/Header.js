@@ -13,7 +13,7 @@ export const Header = () => {
                   <ul>
                     <li className="active ">
                       <Link to="/" className="text-decoration-none">
-                        Homepage
+                        Home
                       </Link>
                     </li>
                     <li>

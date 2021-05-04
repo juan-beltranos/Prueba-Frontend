@@ -23,7 +23,7 @@ export const Favorites = () => {
                 <div className="row">
                   <div className="col-lg-8 col-md-8 col-sm-8">
                     <div className="section-title">
-                      <h4>Mis Favoritas</h4>
+                      <h4>favorites</h4>
                     </div>
                   </div>
                 </div>
@@ -41,7 +41,7 @@ export const Favorites = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6 mt-2">
+                  <div className="col-md-6 mt-5">
                     <div>
                       <p className="text-info text-uppercase fw-bold fs-6">
                         {title}{" "}

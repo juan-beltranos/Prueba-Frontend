@@ -29,7 +29,7 @@ export const MoviesSection = () => {
                 <div className="row">
                   <div className="col-lg-8 col-md-8 col-sm-8">
                     <div className="section-title">
-                      <h4>Populares</h4>
+                      <h4>popular</h4>
                     </div>
                   </div>
                 </div>

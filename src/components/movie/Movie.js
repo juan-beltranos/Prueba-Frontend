@@ -31,6 +31,9 @@ export const Movie = ({ movieInfo }) => {
     <>
       <div className="col-lg-12">
         <div className="anime__details__pic set-bg p-4">
+          <div className="section-title">
+            <h4>Details</h4>
+          </div>
           <img
             src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`}
             alt={title}
