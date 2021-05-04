@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const MovieCard = ({ popular }) => {
 
   //console.log(popular);
-  const { id, title, poster_path, vote_count, overview } = popular;
+  const { id, title, poster_path, vote_count, overview , backdrop_path} = popular;
 
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -17,6 +17,7 @@ export const MovieCard = ({ popular }) => {
       localStorage.setItem( "id",JSON.stringify(id));
       localStorage.setItem( "vote_count",JSON.stringify(vote_count));
       localStorage.setItem( "overview",JSON.stringify(overview));
+      localStorage.setItem( "backdrop_path",JSON.stringify(backdrop_path));
     }
   };
 

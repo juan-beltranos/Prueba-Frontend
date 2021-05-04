@@ -11,11 +11,15 @@ export const Header = () => {
               <div className="header__nav">
                 <nav className="header__menu mobile-menu">
                   <ul>
-                    <li className="active">
-                      <Link to="/">Homepage</Link>
+                    <li className="active ">
+                      <Link to="/" className="text-decoration-none">
+                        Homepage
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/favorites">Favorites</Link>
+                      <Link to="/favorites" className="text-decoration-none">
+                        Favorites
+                      </Link>
                     </li>
                   </ul>
                 </nav>

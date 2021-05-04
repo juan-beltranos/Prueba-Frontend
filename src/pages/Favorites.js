@@ -2,18 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Favorites = () => {
-    
   const title = JSON.parse(localStorage.getItem("title"));
   const poster_path = JSON.parse(localStorage.getItem("poster"));
   const id = JSON.parse(localStorage.getItem("id"));
   const overview = JSON.parse(localStorage.getItem("overview"));
+  const backdrop_path = JSON.parse(localStorage.getItem("backdrop_path"));
 
   return (
     <>
-      <section className="product spad">
-        <div className="container">
+      <div
+        className="bg-favorites"
+        style={{
+          backgroundImage: `URL("https://image.tmdb.org/t/p/w500/${backdrop_path}")`,
+        }}
+      >
+        <div className="container relative">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 mt-5  ">
               <div className="trending__product">
                 <div className="row">
                   <div className="col-lg-8 col-md-8 col-sm-8">
@@ -25,7 +30,7 @@ export const Favorites = () => {
                 <div className="row ">
                   <div className="col-lg-4 col-md-6 col-sm-6 ">
                     <div className="product__item ">
-                      <div className="product__item__pic set-bg">
+                      <div className="product__item__pic set-bg  text-center">
                         <Link to={`/movie/${id}`}>
                           <img
                             src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
@@ -36,7 +41,7 @@ export const Favorites = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-6 mt-2">
                     <div>
                       <p className="text-info text-uppercase fw-bold fs-6">
                         {title}{" "}
@@ -49,7 +54,7 @@ export const Favorites = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

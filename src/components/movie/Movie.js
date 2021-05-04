@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Movie = ({ movieInfo }) => {
   const {
@@ -9,7 +9,23 @@ export const Movie = ({ movieInfo }) => {
     overview,
     release_date,
     popularity,
+    poster_path,
   } = movieInfo;
+
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const handleFavorite = () => {
+    setIsFavorite(!isFavorite);
+
+    if (!isFavorite) {
+      localStorage.setItem("title", JSON.stringify(title));
+      localStorage.setItem("poster", JSON.stringify(poster_path));
+      localStorage.setItem("id", JSON.stringify(id));
+      localStorage.setItem("vote_count", JSON.stringify(vote_count));
+      localStorage.setItem("overview", JSON.stringify(overview));
+      localStorage.setItem("backdrop_path", JSON.stringify(backdrop_path));
+    }
+  };
 
   return (
     <>
@@ -18,6 +34,7 @@ export const Movie = ({ movieInfo }) => {
           <img
             src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`}
             alt={title}
+            style={{ width: "100%", height: 500 }}
           />
 
           <div className="col-lg-10 p-4">
@@ -55,8 +72,11 @@ export const Movie = ({ movieInfo }) => {
                 </div>
               </div>
             </div>
-            <div className="anime__details__btn">
-              <a href="/" className="follow-btn">
+            <div
+              className="anime__details__btn"
+              onClick={() => handleFavorite()}
+            >
+              <a href="/favorites" className="follow-btn text-decoration-none">
                 <i className="fa fa-heart"></i> Favorite
               </a>
             </div>
