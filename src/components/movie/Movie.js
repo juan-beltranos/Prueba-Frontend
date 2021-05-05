@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Movie = ({ movieInfo }) => {
   const {
@@ -79,9 +80,9 @@ export const Movie = ({ movieInfo }) => {
               className="anime__details__btn"
               onClick={() => handleFavorite()}
             >
-              <a href="/favorites" className="follow-btn text-decoration-none">
+              <Link to={`/favorites`} className="follow-btn text-decoration-none">
                 <i className="fa fa-heart"></i> Favorite
-              </a>
+              </Link>
             </div>
           </div>
         </div>
